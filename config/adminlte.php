@@ -280,6 +280,11 @@ return [
             'url'  => 'barang',
             'icon' => 'fas fa-boxes',
         ],
+        [
+            'text' => 'Scanner Barcode',
+            'url'  => 'scanner',
+            'icon' => 'fas fa-boxes',
+        ],
         // [
         //     'text'    => 'multilevel',
         //     'icon'    => 'fas fa-fw fa-share',
