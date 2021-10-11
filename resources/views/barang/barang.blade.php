@@ -17,6 +17,7 @@
                         <div class="col-sm-6 col-md-12 col-xl-12 col-lg-12">
                         <div class="table-responsive">
                             <a href="{{ route('barang.create') }}" class="btn btn-md btn-success mb-3"><i class="far fa-plus-square"></i> TAMBAH DATA BARANG</a>
+                            <a href="{{ url('cetak_barcode')}}" class="btn btn-md btn-info mb-3" target="_blank">CETAK PDF</a>
                                 <table id="tables" class="table table-striped table-hover" style="width:100%">
                                 <caption>List of Barang</caption>
                                     <thead class="thead-dark">

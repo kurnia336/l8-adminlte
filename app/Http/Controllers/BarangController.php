@@ -10,6 +10,7 @@ use Picqer\Barcode;
 use Picqer\Barcode\BarcodeGeneratorPNG;
 use Picqer\Barcode\BarcodeGeneratorJPG;
 use App\Models\Barang;
+use PDF;
 
 
 class BarangController extends Controller
@@ -24,6 +25,14 @@ class BarangController extends Controller
         //
         $barangs = Barang::all();
         return view('barang.barang', compact('barangs'));
+    }
+
+    public function cetak_pdf()
+    {
+    	// $pegawai = Pegawai::all();
+        $barangs = Barang::all();
+    	$pdf = PDF::loadview('barang.barang_cetak',['barangs'=>$barangs]);
+    	return $pdf->download('cetak_barcode.pdf');
     }
 
     /**

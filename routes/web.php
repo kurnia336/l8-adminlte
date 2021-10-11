@@ -25,12 +25,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
 Route::resource('customer', customerController::class);
 Route::resource('barang', BarangController::class);
+// Route::get('/barang/cetak_barcode',  [App\Http\Controllers\BarangController::class, 'cetak_pdf']);
+
 Route::resource('scanner', ScannerController::class);
 // Route::get('/cari_provinsi', [customerController::class,'loadData_provinsi']);
 // Route::get('/cari_kota', [customerController::class,'loadData_kota']);
 // Route::get('/cari_kecamatan', [customerController::class,'loadData_kecamatan']);
 // Route::get('/cari_kelurahan', [customerController::class,'loadData_kelurahan']);
-
+Route::get('cetak_barcode',[BarangController::class,'cetak_pdf']);
 Route::get('tambahCustomer/getcities/{id}',[customerController::class,'getCities']);
 Route::get('tambahCustomer/getdistricts/{id}',[customerController::class,'getDistricts']);
 Route::get('tambahCustomer/getsubdistricts/{id}',[customerController::class,'getSubdistricts']);
